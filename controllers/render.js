@@ -9,8 +9,11 @@ var config              = require('nconf');
 // End of dependencies.
 
 
-module.exports = function () {
-  this.get('/', function (req, res) {
-    res.render('index', { title: 'Express' });
-  });
+/**
+ * Обертка над res.render().
+ */
+module.exports = function (template, variables) {
+  return function (req, res) {
+    res.render(template, variables);
+  };
 };

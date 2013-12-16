@@ -7,6 +7,11 @@
   },
   "dependencies": {
     "express": "3.3.7",
-    "jade": "*"
+    "jade": "*",
+    "bootable": "~0.2.2",
+    "bootable-environment": "~0.2.0",
+    "winston-wrapper": "~1.0.1",
+    "nconf": "~0.6.9",
+    "mongoose": "~3.8.2"
   }
 }

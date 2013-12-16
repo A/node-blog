@@ -9,8 +9,4 @@ var config              = require('nconf');
 // End of dependencies.
 
 
-module.exports = function () {
-  this.get('/', function (req, res) {
-    res.render('index', { title: 'Express' });
-  });
-};
+exports.expressLogHelper = 'req'.green + ': [' + ':method'.grey  + ']' + ' :status :url '.grey + ':response-time ms'.green;
