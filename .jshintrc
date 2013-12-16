@@ -1,0 +1,17 @@
+{
+  "browser": false,
+  "curly": false, // Fucking comment!
+  "expr": true,
+  "indent": 2,
+  "jquery": false,
+  "laxcomma": true,
+  "laxbreak": true,
+  "maxdepth": 3,
+  "node": true,
+  "trailing": true,
+  "quotmark": "single",
+  "smarttabs": true,
+  "strict": true,
+  "undef": true,
+  "white": true
+}
