@@ -1,0 +1,177 @@
+// Dependencies.
+
+@import 'nib'
+
+
+// Variables.
+noise = url('/images/noise_2.png')
+color__white = #FFF
+color__dark = #261F00
+color__blue = #2996CC
+color__subdued = #99968A
+color__moarsubdued = #D6D4CC
+
+global-reset()
+
+
+body
+  background noise #F0EFE8
+  font-family Georgia, Serif
+  font-size 20px
+  text-shadow 0 1px 0 #FFF
+  color color__dark
+
+a
+  color inherit
+  &:hover
+    color color__blue
+
+.hr
+  size 100% 1px
+  background-color color__subdued
+  box-shadow 0 1px 0 color__white
+
+.wrapper
+  margin 0 auto
+
+@media (min-width: 320px)
+  .wrapper
+    width 280px
+
+@media (min-width: 640px)
+  .wrapper
+    width 640px
+
+.header 
+  position relative
+  margin-top 48px
+
+.header__title
+    font-size 40px
+    text-indent -3px
+
+.header__title--subdued
+  color color__subdued
+
+.header__link
+  text-decoration none
+  &:hover
+    color color__blue
+    text-decoration underline
+
+.about 
+  margin 16px 0 36px
+  padding-top 6px
+  line-height 20px
+  font-size 14px
+  color color__subdued
+  clearfix()
+
+.avatar
+  size 64px
+  position absolute
+  left -112px
+  top -10px
+
+.content
+  margin 48px 0 96px
+  line-height 30px
+  
+  a
+    color color__blue
+
+  & > h2
+    font-size 28px
+    margin 24px 0
+  & > h3
+    font-size 24px
+    margin-bottom 16px
+  & > h4
+    font-size 20px
+    font-weight bold
+    margin-bottom 16px
+
+  & > p
+  & > ul
+  & > pre
+    padding-bottom: 24px
+  & > pre
+    font-family Consolas
+    font-size 16px
+    line-height: 24px
+    word-wrap break-word
+
+  & img
+    max-width 100%
+
+  & strong
+    font-weight bold
+  
+  & em
+    font-style italic
+
+  & > ul
+    position: relative
+
+    & li
+      position relative
+      &::before
+        content '—'
+        display inline-block
+        position absolute
+        left -32px
+        width: 32px
+        color color__subdued
+        text-shadow 0 1px 0 color__white
+
+
+  & > ol
+    position: relative
+    margin-left: -32px
+    & li
+      padding-left 32px
+    & .number
+      absolute left 0
+      color color__subdued
+      font-style italic
+
+
+.content-header
+  padding-bottom: 24px
+.content-header__title
+  font-size 32px
+.content-header__subtitle
+  font-size 14px
+  color color__moarsubdued
+  text-shadow: 0 1px 0 #FAF9F7
+.content-header__link
+  text-decoration none
+  &:hover
+    color color__blue
+    text-decoration underline
+
+.articles-list
+  position relative
+  line-height 34px
+
+.articles-list__title
+  position absolute
+  left -112px
+  display block
+  width 64px
+  text-align center
+  // font-size 24px
+  // margin 32px 0 16px
+  color color__subdued
+
+.articles-list__inline-subtitle
+  color color__subdued
+  font-size 14px
+
+.articles-list__item
+  .articles-list__link
+    text-decoration none
+    color inherit
+    &:hover
+      color color__blue
+      text-decoration underline

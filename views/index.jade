@@ -1,5 +1,9 @@
 extends layout
 
+
 block content
-  h1= title
-  p Welcome to #{title}
+    - var articles = [{title: 'My Second Post', link: '#'},{title: 'My First Post', link: '#'}]
+    ul.articles-list
+      - each article in articles
+        li.articles-list__item
+          a.articles-list__link(href="#{article.link}")= article.title

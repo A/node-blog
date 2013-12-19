@@ -5,12 +5,12 @@
  */
 var log                 = require('winston-wrapper')(module);
 var config              = require('nconf');
-
+var requireTree         = require('require-tree');
+var controllers         = requireTree('../controllers');
 // End of dependencies.
 
 
 module.exports = function () {
-  this.get('/', function (req, res) {
-    res.render('index', { title: 'Express' });
-  });
+  this.get('/', controllers.render('index'));
+  this.get('/stylesheets/main.css', controllers.stylus('stylus/main.styl', ['nib']));
 };
