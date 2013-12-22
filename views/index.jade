@@ -5,7 +5,8 @@ block content
   .content
     .content-header 
       .content-header__title Мои статьи
-    ul.articles-list
-      - each post in posts
-        li.articles-list__item
-          a.articles-list__link(href="/posts/#{post._id}")= post.title
+    .content__body
+      ul.articles-list
+        - each post in posts
+          li.articles-list__item
+            a.articles-list__link(href="/posts/#{post._id}")= post.title
