@@ -1,8 +1,7 @@
-- var page = {}
 doctype 5
 html
   head
-    title= page.title
+    title page.title
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     link(rel='stylesheet', href='/stylesheets/main.css')
@@ -10,20 +9,11 @@ html
 
   body
     .wrapper
+      include topbar
       include header
       include about
       .hr
-      .content
-        .content-header
-          .content-header__title= page.title
-          if page.subtittle
-            .content-header__subtitle= page.subtittle
-
-        block content
-
-        if page.date
-          .content__date {{ page.date | date: "%-d.%m.%Y" }} 
-          - // fix me!
+      block content
 
   script(src="/assets/js/prism.min.js")
   script(src="/assets/js/ol-li.js")

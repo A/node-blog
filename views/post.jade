@@ -1,5 +1,7 @@
 extends layout
 
-
 block content
-  .content__body
+  .content
+    .content-header
+      .content-header__title= post.title
+    .content__body!= post.markdown

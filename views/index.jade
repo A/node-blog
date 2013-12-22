@@ -2,8 +2,10 @@ extends layout
 
 
 block content
-    - var articles = [{title: 'My Second Post', link: '#'},{title: 'My First Post', link: '#'}]
+  .content
+    .content-header 
+      .content-header__title Мои статьи
     ul.articles-list
-      - each article in articles
+      - each post in posts
         li.articles-list__item
-          a.articles-list__link(href="#{article.link}")= article.title
+          a.articles-list__link(href="/posts/#{post._id}")= post.title
