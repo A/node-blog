@@ -18,6 +18,9 @@ var app = bootable(express());
 // Setup initializers
 app.phase(bootable.initializers('setup/initializers'));
 
+// Setup params
+app.phase(bootable.initializers('params'));
+
 // Setup environments
 app.phase(require('bootable-environment')('setup/environments', app));
 
