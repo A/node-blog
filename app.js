@@ -7,7 +7,6 @@ var log                 = require('winston-wrapper')(module);
 var config              = require('nconf');
 
 var express             = require('express');
-var routes              = require('./routes');
 var bootable            = require('bootable');
 
 // End of Dependencies
