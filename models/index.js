@@ -20,7 +20,6 @@ mongoose.model('Post', {
     type: String,
     required: true
   },
-  'tags': Array,
   'date': {
     type: Date,
     default: Date.now
