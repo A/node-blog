@@ -1,0 +1,9 @@
+.topbar
+  - if (user)
+    span= user
+    span |
+    a(href='/posts/new') Новая статья
+    span |
+    a(href='/logout') Выйти
+  - else
+    a(href='/login') Войти
