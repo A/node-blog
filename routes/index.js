@@ -12,5 +12,6 @@ var controllers         = requireTree('../controllers');
 
 module.exports = function () {
   this.get('/', controllers.render('index'));
+  this.get('/editor', controllers.render('edit'));
   this.get('/stylesheets/main.css', controllers.stylus('stylus/main.styl', ['nib']));
 };

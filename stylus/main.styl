@@ -8,15 +8,18 @@ noise = url('/images/noise_2.png')
 color__white = #FFF
 color__dark = #261F00
 color__blue = #2996CC
-color__subdued = #99968A
+color__subdued = #99968A 
 color__moarsubdued = #D6D4CC
+shadow = 0 1px 1px rgba(0,0,0,.15)
+// font__sans_serif = 'HelveticaNeue-LightItalic', Helvetica, Arial, sans-serif
+font__serif = Georgia, Serif
 
 global-reset()
 
 
 body
   background noise #F0EFE8
-  font-family Georgia, Serif
+  font-family font__serif
   font-size 20px
   text-shadow 0 1px 0 #FFF
   color color__dark
@@ -124,6 +127,43 @@ a
         color color__subdued
         text-shadow 0 1px 0 color__white
 
+  & label
+    margin-top 8px
+    font-size: 16px
+    color color__subdued
+    font-style italic
+
+
+  & input
+    display: block
+    size 100% 32px
+    margin-bottom: 16px
+    box-shadow inset shadow
+    border 1px solid color__subdued
+
+  & textarea
+    display block
+    width 100% !important
+    height 288px
+    margin-bottom 16px
+    box-shadow inset shadow
+    border 1px solid color__subdued
+    background noise #FFF
+
+  & button[type=submit]
+    size 108px 36px
+    background-color #FFE666
+    outline none
+    border 1px solid color__subdued
+    box-shadow shadow
+    float right
+    padding 0
+    margin-right -6px // TODO: Fix this nasty hack.
+    font-size 16px
+    font-family font__serif
+
+    &:active
+      background #EED555
 
   & > ol
     position: relative
@@ -134,7 +174,6 @@ a
       absolute left 0
       color color__subdued
       font-style italic
-
 
 .content-header
   padding-bottom: 24px
@@ -149,6 +188,7 @@ a
   &:hover
     color color__blue
     text-decoration underline
+
 
 .articles-list
   position relative

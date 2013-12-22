@@ -3,9 +3,9 @@ extends layout
 
 block content
   .content__body
-    label(for='article-title')
+    form(method='post' action='/post')
+    label(for='article-title') Заголовок
     input#article-title
-    label(for='article-subtitle')
-    input#article-subtitle
-    textarea.article-content
-    button(type='submit') Сохранить
+    label(for='article-content') Содержимое
+    textarea#article-content
+    button(type='submit') Опубликовать
