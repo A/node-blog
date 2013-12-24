@@ -9,4 +9,9 @@ block content
       ul.articles-list
         - each post in posts
           li.articles-list__item
-            a.articles-list__link(href="/posts/#{post._id}")= post.title
+            a.articles-list__link(href="/posts/#{post._id}")= post.title 
+            - if (user)
+              span.articles-list__inline-subtitle
+                a.articles-list__link(href='/posts/#{post._id}/edit') редактировать
+              span.articles-list__inline-subtitle
+                a.articles-list__link(href='/posts/#{post._id}/remove') удалить

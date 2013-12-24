@@ -16,7 +16,6 @@ var express             = require('express');
 module.exports = function () {
 
   // Get user credentials if exists, and provide some data to views.
-  this.all('*', controllers.auth.check(config.get('credentials')), controllers.variables());
 
   // Render index page
   this.get('/', controllers.render('index'));
@@ -33,8 +32,20 @@ module.exports = function () {
   // editor for create or update posts.
   this.post('/posts', controllers.post.create(), controllers.redirect('/'));
 
-  // render post
+  // Render post
   this.get('/posts/:post', controllers.render('post'));
+
+  // Render editor for post
+  this.get('/posts/:post/edit', controllers.render('editor'));
+
+  // Update post
+  this.post('/posts/:post/', controllers.post.update(), controllers.redirect('/'));
+
+  // Remove post
+  this.get('/posts/:post/remove', controllers.post.remove(), controllers.redirect('/'));
+
+
+
 
 
   // Return compiled stylus-file.

@@ -4,11 +4,22 @@ extends layout
 block content
   .content
     .content-header
-      .content-header__title Новая статья
+      - if (post)
+        .content-header__title= post.title
+      - else
+        .content-header__title Новая статья
     .content__body
-      form(method='post' action='/posts')
-        label(for='article-title') Заголовок
-        input#article-title(name='title')
-        label(for='article-content') Содержимое (markdown)
-        textarea#article-content(name='content')
-        button(type='submit') Опубликовать
+      - if (post)
+          form(method='post' action='/posts/#{post._id}/')
+            label(for='article-title') Заголовок
+            input#article-title(name='title' value='#{post.title}')
+            label(for='article-content') Содержимое (markdown)
+            textarea#article-content(name='content')= post.content
+            button(type='submit') Опубликовать
+      - else
+          form(method='post' action='/posts')
+            label(for='article-title') Заголовок
+            input#article-title(name='title')
+            label(for='article-content') Содержимое (markdown)
+            textarea#article-content(name='content')
+            button(type='submit') Опубликовать
