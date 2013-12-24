@@ -34,9 +34,10 @@ exports.remove = function () {
 // Remove post
 exports.update = function () {
   return function (req, res, next) {
-    res.locals.post.title = req.body.title;
-    res.locals.post.content = req.body.content;
-    res.locals.post.save(function (err) {
+    var post = res.locals.post;
+    post.title = req.body.title;
+    post.content = req.body.content;
+    post.save(function (err) {
       next(err);
     });
   };
