@@ -6,18 +6,18 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.3.7",
+    "express": "*",
     "jade": "*",
-    "bootable": "~0.2.2",
-    "bootable-environment": "~0.2.0",
-    "winston-wrapper": "~1.0.1",
-    "nconf": "~0.6.9",
-    "mongoose": "~3.8.2",
-    "up-express-logger": "~0.1.0",
-    "process-pwd": "~0.1.0",
-    "marked": "~0.2.10",
-    "require-tree": "~0.3.2",
-    "stylus": "~0.41.3",
-    "connect-stylus": "~0.4.0"
+    "bootable": "*",
+    "bootable-environment": "*",
+    "winston-wrapper": "*",
+    "nconf": "*",
+    "mongoose": "*",
+    "up-express-logger": "*",
+    "process-pwd": "*",
+    "marked": "*",
+    "require-tree": "*",
+    "stylus": "*",
+    "connect-stylus": "*"
   }
 }
