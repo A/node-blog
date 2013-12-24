@@ -16,6 +16,8 @@ module.exports = function (done) {
   // Setup nconf
   config.file({'file': pwd + '/config.json'});
 
+  process.env.MONGOLAB_URI
+    && config.set('mongodb:host', process.env.MONGOLAB_URI);
 
   // You can do moar setups here
   // ...
