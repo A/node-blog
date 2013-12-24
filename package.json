@@ -18,6 +18,7 @@
     "marked": "*",
     "require-tree": "*",
     "stylus": "*",
-    "connect-stylus": "*"
+    "connect-stylus": "*",
+    "node-markdown": "~0.1.1"
   }
 }
