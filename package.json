@@ -15,7 +15,6 @@
     "mongoose": "*",
     "up-express-logger": "*",
     "process-pwd": "*",
-    "marked": "*",
     "require-tree": "*",
     "stylus": "*",
     "connect-stylus": "*",
