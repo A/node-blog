@@ -1,0 +1,15 @@
+{
+    "browser": false, 
+    "curly": false,  
+    "expr": true,    
+    "jquery": false, 
+    "laxcomma": true,
+    "laxbreak": true,
+    "maxdepth": 3,   
+    "node": true,
+    "trailing": true,
+    "quotmark": "single",
+    "smarttabs": true,
+    "strict": true,  
+    "undef": true
+}
