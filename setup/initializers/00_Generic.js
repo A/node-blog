@@ -21,6 +21,7 @@ module.exports = function (done) {
 
   process.env.PORT
     && config.set('express:port', process.env.PORT);
+
   // You can do moar setups here
   // ...
 
