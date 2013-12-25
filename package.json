@@ -18,6 +18,7 @@
     "require-tree": "*",
     "stylus": "*",
     "connect-stylus": "*",
-    "markdown": "~0.5.0"
+    "markdown": "~0.5.0",
+    "nib": "~1.0.1"
   }
 }
