@@ -19,6 +19,8 @@ module.exports = function (done) {
   process.env.MONGOLAB_URI
     && config.set('mongodb:host', process.env.MONGOLAB_URI);
 
+  process.env.PORT
+    && config.set('express:port', process.env.PORT);
   // You can do moar setups here
   // ...
 
