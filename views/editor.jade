@@ -12,14 +12,14 @@ block content
       - if (post)
           form(method='post' action='/posts/#{post._id}/')
             label(for='article-title') Заголовок
-            input#article-title(name='title' value='#{post.title}')
+            input#article-title(name='title' value='#{post.title}' required)
             label(for='article-content') Содержимое (markdown)
-            textarea#article-content(name='content')= post.content
+            textarea#article-content(name='content' required)= post.content
             button(type='submit') Опубликовать
       - else
           form(method='post' action='/posts')
             label(for='article-title') Заголовок
-            input#article-title(name='title')
+            input#article-title(name='title' required)
             label(for='article-content') Содержимое (markdown)
-            textarea#article-content(name='content')
+            textarea#article-content(name='content' required)
             button(type='submit') Опубликовать

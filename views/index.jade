@@ -3,15 +3,19 @@ extends layout
 
 block content
   .content
-    .content-header
-      .content-header__title Мои статьи
-    .content__body
-      ul.articles-list
-        - each post in posts
-          li.articles-list__item
-            a.articles-list__link(href="/posts/#{post._id}")= post.title 
-            - if (user)
-              span.articles-list__inline-subtitle
-                a.articles-list__link(href='/posts/#{post._id}/edit') редактировать
-              span.articles-list__inline-subtitle
-                a.articles-list__link(href='/posts/#{post._id}/remove') удалить
+    - if (0 === posts.length)
+      .content-header
+        .content-header__title.empty-list Здесь нет ни одной записи.
+    - else
+      .content-header
+        .content-header__title Записи
+      .content__body
+        ul.articles-list
+          - each post in posts
+            li.articles-list__item
+              a.articles-list__link(href="/posts/#{post._id}")= post.title 
+              - if (user)
+                span.articles-list__inline-subtitle
+                  a.articles-list__link(href='/posts/#{post._id}/edit') редактировать
+                span.articles-list__inline-subtitle
+                  a.articles-list__link(href='/posts/#{post._id}/remove') удалить
