@@ -1,4 +1,4 @@
-]node-blog
+node-blog
 =========
 [![Code Climate][1]][2]
 
