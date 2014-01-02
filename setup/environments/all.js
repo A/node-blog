@@ -19,7 +19,8 @@ module.exports = function () {
   this.set('view engine', 'jade');
   this.use(express.favicon());
   this.use(express.logger(loggerformat));
-  this.use(express.bodyParser());
+  this.use(express.urlencoded()); // Replace for depricated connect.bodyParser()
+  this.use(express.json()); // Replace for depricated connect.bodyParser()
   this.use(express.methodOverride());
   this.use(this.router);
   this.use(express.static(pwd + '/public'));
