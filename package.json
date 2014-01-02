@@ -1,7 +1,6 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
+  "name": "node-blog",
+  "version": "0.1.0",
   "scripts": {
     "start": "node app.js"
   },
