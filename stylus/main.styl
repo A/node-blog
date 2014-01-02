@@ -11,15 +11,13 @@ color__blue = #2996CC
 color__subdued = #99968A 
 color__moarsubdued = #D6D4CC
 shadow = 0 1px 1px rgba(0,0,0,.15)
-// font__sans_serif = 'HelveticaNeue-LightItalic', Helvetica, Arial, sans-serif
-font__serif = Georgia, Serif
+font__base = Georgia, Serif
 
 global-reset()
 
-
 body
   background noise #F0EFE8
-  font-family font__serif
+  font-family font__base
   font-size 20px
   text-shadow 0 1px 0 #FFF
   color color__dark
@@ -28,11 +26,6 @@ a
   color inherit
   &:hover
     color color__blue
-
-.hr
-  size 100% 1px
-  background-color color__subdued
-  box-shadow 0 1px 0 color__white
 
 .wrapper
   position relative
@@ -58,18 +51,18 @@ a
     text-decoration underline
 
 .about 
-  margin 16px 0 36px
-  padding-top 6px
+  margin 16px 0 0
+  padding 6px 0 36px
   line-height 20px
   font-size 14px
   color color__subdued
+  border-bottom solid 1px color__subdued
+  box-shadow 0 1px 0 color__white
   clearfix()
 
 .avatar
+  absolute top 38px left -112px 
   size 64px
-  position absolute
-  left -112px
-  top 38px
 
 .content
   margin 48px 0 96px
@@ -80,22 +73,23 @@ a
   a
     color color__blue
 
-  & > h1
+  & h1
     font-size 28px
     margin 24px 0
-  & > h2
+  & h2
     font-size 24px
     margin-bottom 16px
-  & > h3
+  & h3
     font-size 20px
     font-weight bold
     margin-bottom 16px
 
-  & > p
-  & > ul
-  & > pre
+  & p
+  & ul
+  & pre
     padding-bottom: 24px
-  & > pre
+
+  & pre
     font-family Consolas
     font-size 16px
     line-height: 24px
@@ -110,7 +104,7 @@ a
   & em
     font-style italic
 
-  & > ul
+  & ul
     position: relative
 
     & li
@@ -118,11 +112,20 @@ a
       &::before
         content '—'
         display inline-block
-        position absolute
-        left -32px
+        absolute left -32px
         width: 32px
         color color__subdued
         text-shadow 0 1px 0 color__white
+
+  & ol
+    position: relative
+    margin-left: -32px
+    & li
+      padding-left 32px
+    & .number
+      absolute left 0
+      color color__subdued
+      font-style italic
 
   & label
     margin-top 8px
@@ -130,14 +133,13 @@ a
     color color__subdued
     font-style italic
 
-
   & input
     display: block
     size 100% 32px
     margin-bottom: 16px
     box-shadow inset shadow
     border 1px solid color__subdued
-    font-family font__serif
+    font-family font__base
     font-size 20px
     padding-left 10px
     box-sizing border-box
@@ -150,7 +152,7 @@ a
     box-shadow inset shadow
     border 1px solid color__subdued
     background noise #FFF
-    font-family font__serif
+    font-family font__base
     font-size 20px
     padding 10px
     box-sizing border-box
@@ -164,29 +166,22 @@ a
     float right
     padding 0
     font-size 16px
-    font-family font__serif
+    font-family font__base
 
     &:active
       background #EED555
 
-  & > ol
-    position: relative
-    margin-left: -32px
-    & li
-      padding-left 32px
-    & .number
-      absolute left 0
-      color color__subdued
-      font-style italic
-
 .content-header
   padding-bottom: 24px
+
 .content-header__title
   font-size 32px
+
 .content-header__subtitle
   font-size 14px
   color color__moarsubdued
   text-shadow: 0 1px 0 #FAF9F7
+
 .content-header__link
   text-decoration none
   &:hover
@@ -204,8 +199,6 @@ a
   display block
   width 64px
   text-align center
-  // font-size 24px
-  // margin 32px 0 16px
   color color__subdued
 
 .articles-list__inline-subtitle
