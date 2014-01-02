@@ -24,5 +24,4 @@ module.exports = function () {
   this.use(express.methodOverride());
   this.use(this.router);
   this.use(express.static(pwd + '/public'));
-
 };
