@@ -3,9 +3,9 @@
     -   Утилиты
         -   Grunt, CoffeeScript, Esprima, Gulp.
     -   Веб-серверы
-        -   HTTP, Express, Connect, Koa, mocha...
+        -   HTTP, Express, Connect, Koa, ...
     -   Вспомогательные пакеты
-        -   Bootable, extend, ... (Дополнить список)
+        -   Bootable, extend, mocha... (Дополнить список)
     -   Встроенные пакеты
         -   http, child_process, fs, cluster, ...
 -   Философия NodeJS: низкоуровневось, модульность.
